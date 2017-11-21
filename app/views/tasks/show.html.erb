@@ -1,0 +1,19 @@
+<h1>Tasks#show</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+
+<%= link_to('Voir toutes les taches', tasks_path)%>
+
+<p> <%= @task.id%>)
+    <% if @task.status == true %>
+      FAIT
+      <% else %>
+      PAS FAIT
+    <% end %> -
+    <%= @task.name %>
+    <%= link_to('edit task', edit_task_path)%>
+    <%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</p>
+
+
